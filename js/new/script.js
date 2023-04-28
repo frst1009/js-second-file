@@ -1,138 +1,124 @@
 //first task
-/*const users = [
-    {
-    username: 'David',
-    status: 'online',
-    lastActivity: 10
-    }, {
-    
-    username: 'Lucy',
-    status: 'offline',
-    lastActivity: 22
-    
-    }, {
-    
-    username: 'Bob',
-    status: 'online',
-    lastActivity: 104
-    }
-    ];
 
-    let onlineUsers=[];
-for (let i= 0; i<users.length; i++) {
-    if (users[i].status=='online' ) {
-        onlineUsers.push(users[i].username);
-    }
-    alert(`the following users are currently online: ${onlineUsers},${onlineUsers}`);
-}
-*/
-//second task
-/*const student = {
+// function Student(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.technologies = [];
+//     this.status = 'Junior';
+//     this.setTechnologies = function (technologies) {
+//         this.technologies = [
+//             ...this.technologies,
+//             ...technologies, ]; }
+//     this.setNewStatus = function (newStatus) {
+// this.status = newStatus;
+//     }
+// }
 
-    fullName: "Maxim",
-    
-    experienceInMonths: 12,
-    
-    stack: ['HTML', 'CSS', 'JS','React'],
-    
-    }
-    student.job="web developer";
-function giveJobToStudent(student,jobName){
-    alert(`Congratulations! Student ${student.fullName} has a new job!
-        It is now ${jobName.job}`);
-}
-    const updatedStudent = giveJobToStudent(student, student);
-*/
-//third task
-/*
-const student = {
+// class Student {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//         this.technologies = [];
+//         this.status = 'Junior';
+//     }
+//     setTechnologies(technologies) {
+//         this.technologies.push(...technologies);
+//     }
+//     setNewStatus(newStatus) {
+//         this.status = newStatus;
+//     }
 
-    name: 'Maxim',
-    programmingLanguage: 'JavaScript',
-    }
-    
-function handleObjects(obj, key, action){
-    if(action=='get'){
-    return obj[key];
-    }
-    else if(action=='add'){
-        obj[key]="";
-        return obj;
-    }
-    else if(action=='delete'){
-        delete obj[key];
-        return obj;
-    }
-    else {
-        return obj;
-    }
-}
-    const result = handleObjects(student, 'programmingLanguage', 'delete');
-    console.log('result', result);*/
-
-//task 4
-/*function getKiller(suspectInfo, deadPeople) {
-    for (let key in suspectInfo) {
-        let k = 0;
-
-        for (let n of deadPeople) {
-            if (suspectInfo[key].includes(n)) {
-                k++;
-            }
-        }
-
-        if (k == deadPeople.length) {
-        return key;
-        }
-    }
-}
-getKiller(
-    {
-        'James': ['Jacob', 'Bill', 'Lucas'],
-        'Johnny': ['David', 'Kyle', 'Lucas'],
-        'Peter': ['Lucy', 'Kyle'],
-    }, ['Lucas', 'Bill']
-); // Killer James
-
-getKiller(
-    {
-        'Brad': [],
-        'Megan': ['Ben', 'Kevin'],
-        'Finn': [],
-    },
-    ['Ben']
-); // Killer Megan
-*/
-//fifth task
-//function getWinner(applicants, winnerObject){}
+// }
 
 
+// const student = new Student('Maxim', 20);
+// student.setTechnologies(['HTML', 'CSS', 'JavaScript']);
+// student.setNewStatus('Middle');
+// console.log(student);
+
+//task 2(copy pasted from git to analise the code here)
+
+// class Person {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     compareAge(newPerson) {
+//         if (this.age > newPerson.age) {
+//             alert(`${this.name} older  ${newPerson.name}`);
+//         } else if (this.age < newPerson.age) {
+//             alert(`${this.name} younger   ${newPerson.name}`);
+//         }
+//     }
+// }
+
+// const person1 = new Person('Maxim', 24);
+// const person2 = new Person('Svetlana', 36);
+// const person3 = new Person('Irina', 23);
+
+// person1.compareAge(person2); // Maxim is younger than Svetlana
+// person2.compareAge(person3); // Svetlana is older than Irina
+// person3.compareAge(person1); // Irina is younger than Maxim
 
 
+//task 3
 
+// class CarService {
+//     static DefaultWorkingHours = {
+//         from: '9:00',//start time of working hours
+//         till: '20.00',//end of it
+//     };
+//     constructor(name, workingHours=CarService.DefaultWorkingHours) {
+//         this.name = name;
+//         this.workingHours = workingHours;
+//     }
+//     RepairCar(carName) {
+//         if (!carName || typeof carName != "string") {
+//             console.error("Where is Name?");
+//             return;
+//         }
+//         let now = new Date().getHours();
+//         let fromhours = this.workingHours.from.split(":")[0];
+//         let tillhours = this.workingHours.till.split(":")[0];
+//         if (now < fromhours || now >= tillhours) {
+//             alert("Unfortunately, we are closed now. Come back tomorrow");
+//         }
 
+//         else {
+//             alert("Now we will repair your car carName! Please wait");
+//         }
+//     }
+// }
+// const carService = new CarService('RepairCarNow', { from: '8:00', till: '20:00' });
+// carService.RepairCar('BMW');
 
+// class Dictionary{
+//     constructor(name){
+//         this.name=name;
+//         this.words={};
+//     }
+//     add(word, description) {
+//         if (!this.words.hasOwnProperty(word))
+//             this.words[word] = { word, description };
+//     }
+//     remove(word) {
+//         delete this.words[word];
+//     }
+//     get(word) {
+//         return this.words[word];
+//     }
+//     showAllWords() {
+//         for (const word in this.words) {
+//             console.log(`${word} - ${this.words[word].description}`);
+//     }
+// }
+// }
+// const dictionary = new Dictionary('Толковый словарь');
+// dictionary.add('JavaScript', 'популярный язык программирования');
+// dictionary.add('Веб-разработчик', 'Человек, который создает новые сервисы и сайты или поддерживает и дополняет существующие');
+ 
+// dictionary.remove('JavaScript');
+// dictionary.showAllWords();
 
-
-
-
-
-
-
-
-
-//date excercises
-//1)
-/*function getDateFormst(date, separator){
-date = new Date();
-    let df = date.getFullYear() + separator + ('0' + (date.getMonth()+1)).slice(-2) + separator + date.getDate();
-}*/
-
-//2)
-/*function getDaysBeforeBirthday(bday){
-let date=new Date();
-bday=new Date(date.getFullYear(), 8, 15);
-bday=Math.ceil( (bday.getTime()-date.getTime()) / (1000 * 3600 * 24));
-}
-*/
 
